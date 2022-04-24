@@ -39,9 +39,7 @@ const Home = () => {
                 {
                     users.map(user => <li
                     key={user._id}
-                    >{user.name} : : {user.email}
-                    <Link to={`/update/${user._id}`}><button>Update</button></Link>
-                    <button onClick={() =>  handleUserDelete(user._id)}>x</button>
+                    >{user.name} : : {user.email} <Link to={`/update/${user._id}`}><button>Update</button></Link> <button onClick={() =>  handleUserDelete(user._id)}>x</button>
                     </li>)
                 }
             </ul>
@@ -50,4 +48,3 @@ const Home = () => {
 };
 
 export default Home;
-
