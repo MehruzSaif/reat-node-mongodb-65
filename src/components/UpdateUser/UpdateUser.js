@@ -20,8 +20,9 @@ const UpdateUser = () => {
         const updatedUser ={name, email};
 
         // send data to the server
-        fetch('http://localhost:5000/user', {
-            method: 'PUT',
+        const url = `http://localhost:5000/user/${id}`
+        fetch(url, {
+            method: 'PUT', // put means DB te thakle update korbo otherwise add it
             headers: {
                 'content-type': 'application/json'
             },
